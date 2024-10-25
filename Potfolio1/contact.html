@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editkaro.in - Contact Us</title>
+    <style>
+        form{
+            display:flex;
+            flex-direction:column;
+        }
+        input,textarea{
+            margin:10px 0;
+            padding:10px;
+        }
+        button{
+            background-color:#333;
+            color:#fff;
+            padding:10px;
+            border:none;
+        }
+        header{
+            background-color: pink;
+            color:white;
+            padding:10px 0;
+            text-align:center;
+        }
+        body{
+            background-size: cover;
+        }
+        button:hover{
+            color:black;
+            background-color: aquamarine;
+        }a{
+            color:black;
+        }
+        a:hover{
+            color:black;
+            background-color: aquamarine;
+        }
+       textarea, button,input{
+            margin:10px;
+            padding:10px;
+            width:500px;
+        }
+    </style>
+</head>
+<body background="4b.jpeg">
+    <script>
+        function data(){
+var a=document.getElementById("n1").value;
+var b=document.getElementById("n2").value;
+var c=document.getElementById("n3").value;
+var d=document.getElementById("n4").value;
+if(a==""||b==""||c==""||d=="")
+{
+alert("Ensure you input value to all the fields");
+return false;
+}
+else if(b.length<10||b.length>10)
+{
+alert("Number should be of 10 digits! please enter valid number")
+return false;
+} 
+else if(isNaN(b))
+{
+alert("Only numbers are allowed !please enter valid number")
+return false;
+} 
+else if(c!=d){
+    alert("Please enter same password")
+return false;
+}
+else
+{
+    true;
+}}
+
+     </script>
+    <header>
+        <h1>Contact Us</h1>
+    </header>
+    <section>
+        <form onsubmit="return data()">
+          <input type="text" placeholder="your name"  id="n1">
+          <input type="email" placeholder="your email" id="email">
+          <input type="tel" placeholder="your number" id="n2">
+          <input type="password" placeholder="your password" id="n3">
+          <input type="password" placeholder="confirm password" id="n4">
+          <textarea id="message" placeholder="Your Message" ></textarea>
+            <button type="submit">submit</button>
+        </form>
+     </section>
+    <nav>
+        <a href="home.html">Home</a>
+    </nav>
+    <!-- <script src="script.js"></script> -->
+     <!-- <script>
+        function data(){
+var username=document.getElementById("username");
+var email =document.getElementById("email");
+var number=document.getElementById("number");
+var message =document.getElementById("message");
+if(username.value=="" || email.value=="" || number.value=="" || message.value==""){
+alert("Ensure you input value to all the fields");
+}else{
+    alert("this form has been successfullu submitted");
+}}
+
+     </script> -->
+</body>
+</html>
